@@ -22,3 +22,45 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+
+thisYear = datetime.now().year
+thisMonth = datetime.now().month
+
+print("Welcome to calendar display")
+print("Please choose to continue...")
+# print("Please choose year 4 digits:")
+# userYear = int(input("") or thisYear)
+# print("Please choose month:")
+# userMonth = int(input("") or thisMonth)
+
+userInput = [int(x)
+             for x in input("Please enter the month and year: ").split()]
+
+# print(len(userInput))
+if len(userInput) == 0:
+    calendarMonth = calendar.month(thisYear, thisMonth)
+    print(calendarMonth,
+          "\n Please provide Month and Year inputs, month followed by 4 digit year")
+elif len(userInput) == 1:
+    calendarMonth = calendar.month(thisYear, userInput[0])
+    print(calendarMonth)
+else:
+    calendarMonth = calendar.month(userInput[1], userInput[0])
+    print(calendarMonth)
+
+# while not userYear:
+#     print("Please choose year")
+# while not userMonth:
+#     print("Please choose month")
+
+
+# calendarMonth = calendar.month(thisYear, thisMonth)
+# calendar = calendar.calendar(thisYear, thisMonth)
+# dateMonth = datetime(today.month)
+# dateMonth = datetime(today.month)
+
+# print(thisYear)
+# print(thisMonth)
+# calendarMonth = calendar.month(userYear, userMonth)
+# print(calendarMonth)
