@@ -13,9 +13,14 @@ num = int(num)
 
 def is_even(num):
     if(num % 2 == 0):
-        print("Even!")
+        # print("Even!")
+        return True
     else:
-        print("Odd")
+        # print("Odd")
+        return False
 
 
-is_even(num)
+if is_even(num) == True:
+    print("Even!")
+else:
+    print("Odd")
